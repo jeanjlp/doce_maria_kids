@@ -3,7 +3,6 @@ import { Avatar, Grid, Paper, TextField, Button } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import { BrowserRouter } from "react-router-dom";
 
 const Login = () => {
 
@@ -29,7 +28,7 @@ const Login = () => {
                 label = "lembre-me"
                 />
                 <Button style = {buttonStyle} type = 'submit' color = 'primary' variant = "contained" fullWidth>
-                    <BrowserRouter>Entrar</BrowserRouter>
+                   Entrar
                     </Button>
             </Paper>
         </Grid>
