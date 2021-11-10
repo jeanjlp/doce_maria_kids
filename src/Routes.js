@@ -1,24 +1,40 @@
 
-import { Router } from "@material-ui/icons";
+// import { Router } from "@material-ui/icons";
 import React from "react";
-import {Switch} from "react-router-dom";
+import { 
+    BrowserRouter,
+    Switch,
+    Route
+} from "react-router-dom";
 import Login from "./components/login";
-
-export default function Rotas () {
-    return(
+import Home from "./components/home";
+export default function Rotas() {
+    return (
+    <BrowserRouter>
+       
         <Switch>
-            <Router path= "/">
-                <h1>pagina inicial</h1>
+           
+            <Route exact path= "/">
+                {/* <h1>pagina inicial</h1> */}
+                <Login />
+            </Route>
 
-            </Router>
-            <Router path= "/login">
-                <Login></Login>
+            <Route exact path="/home">
+               <Home />
+            </Route>
 
-            </Router>
+            <Route exact >
+               <div> 
+                   Nao temos esse componente
+               </div>
+            </Route>
 
         </Switch>
+        
+    </BrowserRouter>
+        
 
     );
-    
+
 
 }
