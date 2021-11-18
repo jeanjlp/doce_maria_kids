@@ -5,6 +5,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { useHistory } from "react-router-dom";
 import '../assets/css/login.css';
+
 const Login = () => {
 
     const paperStyle = {padding: 20, height: '70vh', width: 260, margin: '20px auto'}
