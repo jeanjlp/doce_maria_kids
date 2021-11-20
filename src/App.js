@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter }from "react-router-dom";
-import './App.css';
 import Login from "./components/login";
 import { Router } from "@material-ui/icons";
 import {Switch} from "react-router-dom";
