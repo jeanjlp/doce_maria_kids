@@ -62,8 +62,7 @@ const useStyles = makeStyles((theme) => ({
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Album() {
-  const classes = useStyles();
-
+  const classes = useStyles()
   return (
     <React.Fragment>
       <CssBaseline />
@@ -71,7 +70,7 @@ export default function Album() {
         <Toolbar>
           <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            Doce Maria Kids
           </Typography>
         </Toolbar>
       </AppBar>
@@ -109,7 +108,7 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image="https://source.unsplash.com/random"// ver se pega esse caminho da api facebook
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>

@@ -4,7 +4,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { useHistory } from "react-router-dom";
-import '../assets/css/login.css';
+//import '../assets/css/login.css';
 
 const Login = () => {
 
