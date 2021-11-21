@@ -1,14 +1,14 @@
 import  React from 'react';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import ListItem from '@mui/material-ui/core/ListItem';
+import ListItemIcon from '@mui/material-ui/core/ListItemIcon';
+import ListItemText from '@mui/material-ui/core/ListItemText';
+import ListSubheader from '@mui/material-ui/core/ListSubheader';
+import DashboardIcon from '@mui/material-ui/icons/Dashboard';
+import ShoppingCartIcon from '@mui/material-ui/icons/ShoppingCart';
+import PeopleIcon from '@mui/material-ui/icons/People';
+import BarChartIcon from '@mui/material-ui/icons/BarChart';
+import LayersIcon from '@mui/material-ui/icons/Layers';
+import AssignmentIcon from '@mui/material-ui/icons/Assignment';
 
 export const mainListItems = (
   <div>
