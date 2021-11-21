@@ -1,23 +1,23 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@mui/material-ui/core/CssBaseline';
-import Drawer from '@mui/material-ui/core/Drawer';
-import Box from '@mui/material-ui/core/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import MuiDrawer from '@mui/material/Drawer';
+import Box from '@mui/material/Box';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@mui/material-ui/core/Toolbar';
-import List from '@mui/material-ui/core/List';
-import Typography from '@mui/material-ui/core/Typography';
-import Divider from '@mui/material-ui/core/Divider';
-import IconButton from '@mui/material-ui/core/IconButton';
-import Badge from '@mui/material-ui/core/Badge';
-import Container from '@mui/material-ui/core/Container';
-import Grid from '@mui/material-ui/core/Grid';
+import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Badge from '@mui/material/Badge';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import { Paper } from '@material-ui/core/Paper';
-import Link from '@mui/material-ui/core/Link';
-import MenuIcon from '@mui/material-ui/icons/Menu';
-import ChevronLeftIcon from '@mui/material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@mui/material-ui/icons/Notifications';
+import Link from '@mui/material/Link';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from '../../../components/menu';
 
 function Copyright() {
@@ -141,7 +141,7 @@ function Copyright() {
             Dashboard
             </Typography>
             <IconButton color="inherit">
-            <Badge Content={4} color="secondary">{/*estava Badge badge Content*/}
+            <Badge badgeContent={4} color="secondary">{/*estava Badge badge Content*/}
               <NotificationsIcon/>
             </Badge>
             </IconButton>
