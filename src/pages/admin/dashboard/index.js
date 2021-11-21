@@ -1,29 +1,29 @@
-import * as React from 'react';
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import MuiDrawer from '@mui/material/Drawer';
-import Box from '@mui/material/Box';
+import React from 'react';
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@mui/material-ui/core/CssBaseline';
+import Drawer from '@mui/material-ui/core/Drawer';
+import Box from '@mui/material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Link from '@mui/material/Link';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import Toolbar from '@mui/material-ui/core/Toolbar';
+import List from '@mui/material-ui/core/List';
+import Typography from '@mui/material-ui/core/Typography';
+import Divider from '@mui/material-ui/core/Divider';
+import IconButton from '@mui/material-ui/core/IconButton';
+import Badge from '@mui/material-ui/core/Badge';
+import Container from '@mui/material-ui/core/Container';
+import Grid from '@mui/material-ui/core/Grid';
+import Link from '@mui/material-ui/core/Link';
+import MenuIcon from '@mui/icons-material-ui/icons/Menu';
+import ChevronLeftIcon from '@mui/icons-material-ui/icons/ChevronLeft';
+import NotificationsIcon from '@mui/icons-material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from '../../../components/menu';
 
-function Copyright(props) {
+function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="https://material-ui.com/">
         Your Website
       </Link>{' '}
       {new Date().getFullYear()}
@@ -34,7 +34,128 @@ function Copyright(props) {
 
 const drawerWidth = 240;
 
-const AppBar = styled(AppBar, {
+const useStyles = makeStyles((theme) => ({
+  root:{
+    display: 'flex',
+  },
+  toolbar:{
+    paddingRight: 24,
+  },
+  toolbar: {
+    display: 'flex',
+    alignItems:'center',
+    justifyContent: 'flex-end',
+    padding: '0 8px',
+    ...theme.mixins.toolbar,
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer +1,
+    transition: theme.transitions.create(['width','margin'],{
+      easing:theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+        }),
+      },
+      appBarShift: {
+        marginLeft: drawerWidth,
+        width: 'calc(100% - ${drawerWidth}px)',
+        transition: theme.transitions.create(['width','margin'],{
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.enteringScreen,
+        }),
+      },
+      menuButton:{
+        marginRight:36,
+      },
+      menuButtonHidden:{
+        display: 'none'
+      },
+      title:{
+        flexGrow: 1,
+      },
+      drawerPaper:{
+        position: 'relative',
+        whiteSpace: 'nowrap',
+        width: drawerWidth,
+        transition: theme.transitions.create('width',{
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.enteringScreen,
+        }),
+      },
+      drawerPaperClose:{
+        overflowX: 'hidden',
+        transition: theme.transitions.create('width',{
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.leavingScreen,
+        }),
+        width: theme.spacing(7),
+        [theme.breakpoints.up('sm')]:{
+          width: theme.spacing(9),
+        },
+      },
+      appBarSpacer: theme.mixins.toolbar,
+      content: {
+        flexGrow: 1,
+        height:'100vh',
+        overflow:'auto',
+      },
+      container:{
+        paddingTop:theme.spacing(4),
+        paddingBottom:theme.spacing(4),
+      },
+      paper: {
+        padding: theme.spacing(2),
+        display: 'flex',
+        overflow:'auto',
+        flexDirection:'column',
+      },
+      fixedHeight:{
+        height:240,
+      },
+    }));
+    
+export default function Dashboard(){
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(true);
+  const  handleDrawerOpen = ()=>{
+    setOpen(true);
+  };
+  const handleDrawerClose = ()=>{
+    setOpen(false);
+  };
+  const fixedHeightPaper = clsx (classes.paper, classes.fixedHeight);
+
+  return(
+    <div className={classes.root}>
+      <CssBaseline/>
+      <AppBar position = "absolute"className={clsx(classes.appBar, open && classes.appBarShift)}>
+        <Toolbar className={classes.toolbar}>
+          <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="open drawer"
+          onClick={handleDrawerOpen}
+          className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
+          >
+            <MenuIcon/>
+          </IconButton>
+          <Typography component = "h1" variant = "h6" color="inherit" noWrap className={classes.title}>
+            Dashboard
+          </Typography>
+          <IconButton color="inherit">
+            <Badge badgeContent={4} color="secondary">
+              <NotificationsIcon/>
+            </Badge>
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+    </div>
+  )
+}
+    
+
+{/*
+}) styled(AppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
@@ -154,15 +275,25 @@ function DashboardContent() {
             overflow: 'auto',
           }}
         >
-          <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
-              {/* Chart */}
-              
-              {/* Recent Deposits */}
-              
-              {/* Recent Orders */}
-              
+          <Toolbar
+          paper:
+          }}
+          open = {open}
+          >
+            <div className={classes.toolbarIcon}>
+            <IconButton onClick={handleDrawerClose}>
+            <ChevronLeftIcon/>
+            </IconButton>
+            </div>
+            <Divider/>
+          <List>{mainListItems}</List>
+          <Divider/>
+          <List>{secondaryListItems}</List>
+          </Drawer>
+          <main className={classes.content}>
+          <div className={classes.appBarSpacer}/>
+          <Container maxWidth="lg" className={classes.container}>
+            <Grid container spacing={3}>  
             </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
@@ -173,5 +304,15 @@ function DashboardContent() {
 }
 
 export default function Dashboard() {
+  
   return <DashboardContent />;
+
+  </Grid>
+  <Box pt = {4}>
+  <Copyright/>
+  </Box>
+  </Container>
+  </main>
+  </div>
+  );
 }
