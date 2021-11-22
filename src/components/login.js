@@ -18,7 +18,7 @@ const Login = () => {
         history.push('/home')
     }
     return(
-        <Grid >
+        <Grid>
             <Paper elevation = {10} style = {paperStyle}>
             <Grid align= 'center'>
                 <Avatar style = {avatarStyle}><LockOutlinedIcon/></Avatar>
