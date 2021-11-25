@@ -18,7 +18,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="linkedin.com/in/jean-lucas-pereira-a7497970">
         Jean Lucas Pereira
       </Link>{' '}
       {new Date().getFullYear()}
