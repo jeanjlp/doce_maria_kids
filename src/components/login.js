@@ -8,9 +8,13 @@ import { useHistory } from "react-router-dom";
 
 const Login = () => {
 
-    const paperStyle = {padding: 20, height: '70vh', width: 260, margin: '20px auto'}
-    const avatarStyle = {backgroundColor: '#e92f5a'}
-    const buttonStyle = {backgroundColor: '#e92f5a'}
+    const paperStyle = {padding: 20, height: '70vh', width: 260, margin: '20px auto', backgroundColor:'#fae3eb', color:'#a4949c'}
+    const avatarStyle = {backgroundColor: '#de61a7'}
+    const buttonStyle = {backgroundColor: '#de61a7'}
+    const h2Style = {color:'#de61a7'}
+    const h3Style = {color:'#a4949c'}
+    const label1 = {color: '#a4949c'}
+    
     const history = useHistory();
     const eventCLick = () =>{
 
@@ -22,7 +26,8 @@ const Login = () => {
             <Paper elevation = {10} style = {paperStyle}>
             <Grid align= 'center'>
                 <Avatar style = {avatarStyle}><LockOutlinedIcon/></Avatar>
-                <h2>Doce Maria Kids</h2>
+                <h2 style = {h2Style}> Doce Maria Kids </h2>
+                <h3 style = {h3Style}> MODA INFANTIL </h3>
                 </Grid>
                 <TextField label = 'Usuário'placeholder = 'usuario' fullWidth />
                 <TextField label = 'Senha'placeholder = 'senha de acesso' type = 'password' fullWidth />
@@ -30,7 +35,7 @@ const Login = () => {
                 control = {
                     <Checkbox
                     name = "checkedB"
-                    color = "primary"
+                    color = "#a4949c"
                     />
                 }
                 label = "lembre-me"

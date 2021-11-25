@@ -1,7 +1,7 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
+import { GiJasmine } from "react-icons/gi";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
+    padding: theme.spacing(8, 0, 6), 
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
+    
   },
   card: {
     height: '100%',
@@ -54,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   footer: {
-    backgroundColor: theme.palette.background.paper="#dcbfcc",
+    backgroundColor: theme.palette.background.paper="#de61a7",
     padding: theme.spacing(6),
   },
 }));
@@ -68,7 +69,7 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon className={classes.icon} />
+          <GiJasmine className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
             Doce Maria Kids
           </Typography>
