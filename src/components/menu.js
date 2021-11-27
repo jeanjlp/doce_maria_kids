@@ -14,19 +14,19 @@ import ExitToApp from '@mui/icons-material/ExitToApp';
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem button component = "a" href = "/admin">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+      <ListItemText primary="Dashboard"/>
     </ListItem>
-    <ListItem button>
+    <ListItem button component = "a"  href = "/admin/produto">
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
       <ListItemText primary="Produtos" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component = "a" href = "/admin/usuario">
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
