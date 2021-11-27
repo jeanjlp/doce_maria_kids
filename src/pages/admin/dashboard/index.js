@@ -15,6 +15,9 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems, secondaryListItems } from '../../../components/list-menu';
+
+import Menu from '../../../components/menu';
+
 import ImgAdmin from '../../../assets/img/fundo.png';
 
 function Copyright(props) {
@@ -122,6 +125,8 @@ function DashboardContent() {
             </IconButton> */}
           </Toolbar>
         </AppBar>
+
+        <Menu/>
         <Drawer variant="permanent" open={open}>
           <Toolbar
             sx={{
