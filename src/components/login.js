@@ -13,7 +13,7 @@ const Login = () => {
     const buttonStyle = {backgroundColor: '#de61a7'}
     const h2Style = {color:'#de61a7'}
     const h3Style = {color:'#a4949c'}
-    const label1 = {color: '#a4949c'}
+    //const label1 = {color: '#a4949c'}
     
     const history = useHistory();
     const eventCLick = () =>{
