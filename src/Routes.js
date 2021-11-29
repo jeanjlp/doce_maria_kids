@@ -13,6 +13,10 @@ import ProdutoCadastrar from "./pages/admin/produto/produto.cadastro";
 
 //IMPORTS CLIENT
 //import Home from "./pages/client/home"; --- esta em conflito com o home do componets
+import Cliente from './pages/admin/cliente';
+import ClienteEditar from "./pages/admin/cliente/cliente.editar";
+import ClienteCadastro from "./pages/admin/cliente/cliente.cadastro";
+
 import ProdutoDetails from "./pages/client/produto/produto.details";
 import { Router } from "@material-ui/icons";
 
@@ -30,12 +34,11 @@ export default function Routes() {
            <Router path = "/admin/produto" exact component = {Produto}/>
            <Router path = "/admin/produto/cadastro" exact component = {ProdutoCadastrar}/>
            <Router path = "/admin/produto/editar/:idProduto" exact component = {ProdutoEditar}/>
+
+           <Router path = "/admin/cliente" exact component = {Cliente}/>
+           <Router path = "/admin/cliente/cadastro" exact component = {ClienteCadastro}/>
+           <Router path = "/admin/cliente/editar/:idCliente" exact component = {ClienteEditar}/>
            
-
-
-                {/* <h1>pagina inicial</h1> 
-                <Login />
-            </Route>*/}
                 <Route exact path="/home">
                     <Home />
                 </Route>
@@ -46,9 +49,5 @@ export default function Routes() {
                     </Route>
         </Switch>
      </BrowserRouter>
-        
-
     );
-
-
 }

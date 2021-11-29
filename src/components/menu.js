@@ -10,6 +10,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const drawerWidth = 240;
 
@@ -67,6 +68,7 @@ export default function Menu(){
 
     return(
 <>
+<CssBaseline />
 <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
@@ -94,11 +96,6 @@ export default function Menu(){
             >
               Dashboard
             </Typography>
-            {/* <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">   sino de notificacao
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
           </Toolbar>
         </AppBar>
 

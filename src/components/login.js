@@ -27,7 +27,7 @@ const Login = () => {
             <Grid align= 'center'>
                 <Avatar style = {avatarStyle}><LockOutlinedIcon/></Avatar>
                 <h2 style = {h2Style}> Doce Maria Kids </h2>
-                <h3 style = {h3Style}> MODA INFANTIL </h3>
+                <h3 style = {h3Style}> MODA INFANTIL </h3> 
                 </Grid>
                 <TextField label = 'Usuário'placeholder = 'usuario' fullWidth />
                 <TextField label = 'Senha'placeholder = 'senha de acesso' type = 'password' fullWidth />
