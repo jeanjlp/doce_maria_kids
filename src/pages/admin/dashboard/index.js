@@ -10,7 +10,7 @@
 
  const mdTheme = createTheme();
 
- function DashboardContent() {
+ export default function Dashboard() {
     return (
    <ThemeProvider theme={mdTheme}>
      <Box sx={{ display: 'flex' }}>
@@ -38,8 +38,4 @@
        </Box>
      </ThemeProvider>
    );
- }
-
-  export default function Dashboard() {
-   return <DashboardContent />;
  }

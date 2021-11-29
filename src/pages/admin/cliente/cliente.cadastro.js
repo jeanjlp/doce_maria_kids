@@ -6,10 +6,11 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Menu from '../../../components/menu';
 import Footer from '../../../components/footer_menu';
+import TextField from '@mui/material/TextField';
 
 const mdTheme = createTheme();
 
-function DashboardContent() {
+export default function ClienteCadastro() {
     return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -29,7 +30,24 @@ function DashboardContent() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-               <h1>Cadastro de Cliente</h1>      
+            <TextField
+            required
+            id="firstName"
+            name="firstName"
+            label="First name"
+            fullWidth
+            autoComplete="given-name"
+            variant="standard"
+          /> 
+           <TextField
+            required
+            id="lastName"
+            name="lastName"
+            label="Last name"
+            fullWidth
+            autoComplete="family-name"
+            variant="standard"
+          />     
             </Grid>
             <Footer sx={{ pt: 4 }}/>
           </Container>
@@ -37,8 +55,4 @@ function DashboardContent() {
       </Box>
     </ThemeProvider>
   );
-}
-
-export default function ClienteCadastro() {
-  return <DashboardContent />;
 }
