@@ -19,7 +19,7 @@ const Login = () => {
     const eventCLick = () =>{
 
         console.log('cliquei')
-        history.push('/home')
+        history.push('/admin')
     }
     return(
         <Grid>
@@ -40,7 +40,7 @@ const Login = () => {
                 }
                 label = "lembre-me"
                 />
-                <Button onClick={eventCLick} style = {buttonStyle} type = 'submit' color = 'primary' variant = "contained" fullWidth > Entrar </Button>
+                <Button onClick = {eventCLick} style = {buttonStyle} type = 'submit' color = 'primary' variant = "contained" fullWidth > Entrar </Button>
             
             </Paper>
         </Grid>

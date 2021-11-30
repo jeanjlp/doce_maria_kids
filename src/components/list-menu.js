@@ -20,13 +20,13 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard"/>
     </ListItem>
-    <ListItem button component = "a"  href = "/admin/produto">
+    <ListItem button component = "a"  href = "/admin/produto/cadastro">
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
       <ListItemText primary="Produtos" />
     </ListItem>
-    <ListItem button component = "a" href = "/admin/cliente">
+    <ListItem button component = "a" href = "/admin/cliente/cadastro">
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>

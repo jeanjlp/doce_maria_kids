@@ -11,11 +11,16 @@ import Paper from '@mui/material/Paper';
 import { Button } from '@mui/material';
 
 const mdTheme = createTheme();
+const buttonStyle = {backgroundColor: '#de61a7'}
+const eventCLick = () =>{
+
+  console.log('cliquei')
+}
 
 export default function ClienteCadastro() {
     return (
     <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex'}}>
         <Menu title = {'Clientes'}/>
         <Box
           component="main"
@@ -34,11 +39,11 @@ export default function ClienteCadastro() {
             <Grid container spacing={3}>
               <Grid item sm = {12}>
               <Paper
-                  sx={{
+                  sx = {{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    minHeight: 240,
                   }}
                 >
                   <h2>Formulário de Cadastro</h2>
@@ -75,7 +80,8 @@ export default function ClienteCadastro() {
             variant="standard"
           />  
         </Grid> 
-        <Button> Salvar </Button>
+        <Grid intem xs = {12}><Button onClick = {eventCLick} style = {buttonStyle} type = 'submit' color = 'primary' variant = "contained" fullWidth > Salvar </Button>
+        </Grid>
                 </Paper>
                 </Grid>  
             </Grid>
