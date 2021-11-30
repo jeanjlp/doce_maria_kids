@@ -14,7 +14,7 @@
     return (
    <ThemeProvider theme={mdTheme}>
      <Box sx={{ display: 'flex' }}>
-        <Menu/>
+        <Menu title = {'Dashboard'}/>
         <Box
            component="main"
            sx={{

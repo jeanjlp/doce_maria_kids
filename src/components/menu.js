@@ -59,7 +59,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 
-export default function Menu(){
+export default function Menu({title}){
 
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -94,7 +94,7 @@ export default function Menu(){
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              {title}
             </Typography>
           </Toolbar>
         </AppBar>

@@ -7,6 +7,8 @@ import Grid from '@mui/material/Grid';
 import Menu from '../../../components/menu';
 import Footer from '../../../components/footer_menu';
 import TextField from '@mui/material/TextField';
+import Paper from '@mui/material/Paper';
+import { Button } from '@mui/material';
 
 const mdTheme = createTheme();
 
@@ -14,7 +16,7 @@ export default function ClienteCadastro() {
     return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
-        <Menu/>
+        <Menu title = {'Clientes'}/>
         <Box
           component="main"
           sx={{
@@ -30,24 +32,52 @@ export default function ClienteCadastro() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-            <TextField
+              <Grid item sm = {12}>
+              <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 240,
+                  }}
+                >
+                  <h2>Formulário de Cadastro</h2>
+                  <Grid item xs={12} sm={6}>
+          <TextField
             required
-            id="firstName"
-            name="firstName"
-            label="First name"
+            id="nome"
+            name="nome"
+            label="Nome Completo"
             fullWidth
-            autoComplete="given-name"
+            autoComplete="nome"
             variant="standard"
-          /> 
+          />
+        </Grid>
+        <Grid intem xs={12} sm = {3}>
            <TextField
             required
-            id="lastName"
-            name="lastName"
-            label="Last name"
+            id="fone"
+            name="fone"
+            label="Contato"
             fullWidth
-            autoComplete="family-name"
+            autoComplete="fone "
             variant="standard"
-          />     
+          />  
+          </Grid> 
+          <Grid intem xs={12} sm = {3}>
+           <TextField
+            required
+            id="email"
+            name="email"
+            label="Email"
+            fullWidth
+            autoComplete="email"
+            variant="standard"
+          />  
+        </Grid> 
+        <Button> Salvar </Button>
+                </Paper>
+                </Grid>  
             </Grid>
             <Footer sx={{ pt: 4 }}/>
           </Container>
