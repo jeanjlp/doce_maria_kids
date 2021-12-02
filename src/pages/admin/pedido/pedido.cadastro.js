@@ -17,11 +17,11 @@ const eventCLick = () =>{
   console.log('cliquei')
 }
 
-export default function ClienteCadastro() {
+export default function PedidoCadastro() {
     return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex'}}>
-        <Menu title = {'Clientes'}/>
+        <Menu title = {'Pedidos'}/>
         <Box
           component="main"
           sx={{

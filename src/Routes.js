@@ -20,6 +20,10 @@ import ClienteCadastro from "./pages/admin/cliente/cliente.cadastro";
 import ProdutoDetails from "./pages/client/produto/produto.details";
 import { Router } from "@material-ui/icons";
 
+import Pedido from './pages/admin/pedido';
+import PedidoEditar from './pages/admin/pedido/pedido.editar';
+import PedidoCadastro from "./pages/admin/pedido/pedido.cadastro";
+
 export default function Routes() {
     return (
     <BrowserRouter>
@@ -38,6 +42,12 @@ export default function Routes() {
            <Router path = "/admin/cliente" exact component = {Cliente}/>
            <Router path = "/admin/cliente/cadastro" exact component = {ClienteCadastro}/>
            <Router path = "/admin/cliente/editar/:idCliente" exact component = {ClienteEditar}/>
+
+           <Router path = "/admin/pedido" exact component = {Pedido}/>
+           <Router path = "/admin/pedido/cadastro" exact component = {PedidoCadastro}/>
+           <Router path = "/admin/pedido/editar/:idPedido" exact component = {PedidoEditar}/>
+
+
            
                 <Route exact path="/home">
                     <Home />

@@ -32,11 +32,11 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Clientes" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component = "a" href = "/admin/pedido/cadastro"> 
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <ListItemText primary="Opção 1" />
+      <ListItemText primary="Pedido" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
