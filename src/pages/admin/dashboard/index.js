@@ -9,11 +9,12 @@
  import Footer from '../../../components/footer_menu';
 
  const mdTheme = createTheme();
+
  export default function Dashboard() {
     return (
    <ThemeProvider theme={mdTheme}>
      <Box sx={{ display: 'flex'}}>
-        <Menu title = {'Dashboard'}/>
+        <Menu title = {'Dashboard'} />
         <Box
            component="main"
            sx={{

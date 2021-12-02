@@ -32,12 +32,13 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })
+const Drawer = styled (MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })
 (({ theme, open }) => ({
     '& .MuiDrawer-paper': {
       position: 'relative',
       whiteSpace: 'nowrap',
       width: drawerWidth,
+      backgroundColor: '#fae3eb',
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen,
@@ -73,6 +74,7 @@ export default function Menu({title}){
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
+            backgroundColor: '#de61a7'
             }}
           >
             <IconButton
