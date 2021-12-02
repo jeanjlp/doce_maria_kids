@@ -58,7 +58,7 @@ export default function ClienteCadastro() {
             variant="standard"
           />
         </Grid>
-        <Grid intem xs={12} sm = {3}>
+        <Grid item xs={12} sm = {3}>
            <TextField
             required
             id="fone"
@@ -69,7 +69,7 @@ export default function ClienteCadastro() {
             variant="standard"
           />  
           </Grid> 
-          <Grid intem xs={12} sm = {3}>
+          <Grid item xs={12} sm = {3}>
            <TextField
             required
             id="email"
@@ -80,7 +80,7 @@ export default function ClienteCadastro() {
             variant="standard"
           />  
         </Grid> 
-        <Grid intem xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
+        <Grid item xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
          type = 'submit' color = 'primary' >Salvar</Button>
         </Grid>
                 </Paper>

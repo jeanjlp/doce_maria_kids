@@ -35,8 +35,8 @@ export default function PedidoCadastro() {
           }}
         >
           <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={2}>
+          <Container maxWidth="lg" sx={{ mt: 4, mb: 4}}>
+            <Grid container spacing={3}>
               <Grid item sm = {12}>
               <Paper
                   sx = {{
@@ -58,7 +58,7 @@ export default function PedidoCadastro() {
             variant="standard"
           />
         </Grid>
-        <Grid intem xs={12} sm = {3}>
+        <Grid intem xs={12} sm = {6}>
            <TextField
             required
             id="fone"
@@ -69,7 +69,7 @@ export default function PedidoCadastro() {
             variant="standard"
           />  
           </Grid> 
-          <Grid intem xs={12} sm = {3}>
+          <Grid intem xs={12} sm = {6}>
            <TextField
             required
             id="email"
@@ -80,7 +80,7 @@ export default function PedidoCadastro() {
             variant="standard"
           />  
         </Grid> 
-        <Grid intem xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
+        <Grid intem xs = {12} sm = {6}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
          type = 'submit' color = 'primary' >Salvar</Button>
         </Grid>
                 </Paper>
