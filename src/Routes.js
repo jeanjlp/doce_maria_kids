@@ -24,6 +24,12 @@ import Pedido from './pages/admin/pedido';
 import PedidoEditar from './pages/admin/pedido/pedido.editar';
 import PedidoCadastro from "./pages/admin/pedido/pedido.cadastro";
 
+import Financeiro from "./pages/admin/financeiro";
+import FinanceiroEditar from "./pages/admin/financeiro/financeiro.editar";
+import FinanceiroCadastro from "./pages/admin/financeiro/financeiro.cadastro";
+
+
+
 export default function Routes() {
     return (
     <BrowserRouter>
@@ -46,6 +52,10 @@ export default function Routes() {
            <Router path = "/admin/pedido" exact component = {Pedido}/>
            <Router path = "/admin/pedido/cadastro" exact component = {PedidoCadastro}/>
            <Router path = "/admin/pedido/editar/:idPedido" exact component = {PedidoEditar}/>
+
+           <Router path = "/admin/financeiro" exact component = {Financeiro}/>
+           <Router path = "/admin/financeiro/cadastro" exact component = {FinanceiroCadastro}/>
+           <Router path = "/admin/financeiro/editar/:idFinanceiro" exact component = {FinanceiroEditar}/>
 
 
            
