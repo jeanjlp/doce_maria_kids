@@ -38,7 +38,7 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Pedidos" />
     </ListItem>
-    <ListItem button component = "a" href = "/admin/finaceiro/cadastro">
+    <ListItem button component = "a" href = "/admin/financeiro/cadastro">
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
