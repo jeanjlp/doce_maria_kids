@@ -4,11 +4,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import {GiClothes, GiMoneyStack } from "react-icons/gi";
 import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import {BsCardChecklist, BsFacebook} from "react-icons/bs";
+import { RiInstagramFill} from "react-icons/ri";
 import ExitToApp from '@mui/icons-material/ExitToApp';
 
 
@@ -22,9 +21,9 @@ export const mainListItems = (
     </ListItem>
     <ListItem button component = "a"  href = "/admin/produto/cadastro">
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <GiClothes/>
       </ListItemIcon>
-      <ListItemText primary="Produtos" />
+      <ListItemText primary="Vestuário" />
     </ListItem>
     <ListItem button component = "a" href = "/admin/cliente/cadastro">
       <ListItemIcon>
@@ -34,13 +33,13 @@ export const mainListItems = (
     </ListItem>
     <ListItem button component = "a" href = "/admin/pedido/cadastro"> 
       <ListItemIcon>
-        <BarChartIcon />
+        <BsCardChecklist/>
       </ListItemIcon>
       <ListItemText primary="Pedidos" />
     </ListItem>
     <ListItem button component = "a" href = "/admin/financeiro/cadastro">
       <ListItemIcon>
-        <LayersIcon />
+      <GiMoneyStack/>
       </ListItemIcon>
       <ListItemText primary="Financeiro" />
     </ListItem>
@@ -49,16 +48,16 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Postar</ListSubheader>
+    <ListSubheader inset>Plataformas</ListSubheader>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <BsFacebook/>
       </ListItemIcon>
       <ListItemText primary="Facebook" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <RiInstagramFill/>
       </ListItemIcon>
       <ListItemText primary="Instagram" />
     </ListItem>
