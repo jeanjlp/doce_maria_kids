@@ -3,7 +3,7 @@
 import React from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Login from "./components/login";
-import Home from "./components/home";
+import Home from "./components/catalago";
 
 //IMPORTS ADMIN
 import Dashboard from "./pages/admin/dashboard";
@@ -59,7 +59,7 @@ export default function Routes() {
 
 
            
-                <Route exact path="/home">
+                <Route exact path="/catalago">
                     <Home />
                 </Route>
                     <Route exact >
