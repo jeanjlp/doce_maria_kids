@@ -55,7 +55,7 @@ export default function PedidoCadastro() {
                   }}
                 >
                   <h2>Formulário de Cadastro</h2>
-                  <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={2}>
           <TextField
             required
             id="ref"

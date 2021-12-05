@@ -58,7 +58,7 @@ export default function ClienteCadastro() {
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12} sm = {3}>
+        <Grid item xs={12} sm = {3} py = {2}>
            <TextField
             required
             id="fone"
@@ -69,14 +69,14 @@ export default function ClienteCadastro() {
             variant="standard"
           />  
           </Grid> 
-          <Grid item xs={12} sm = {3}>
+          <Grid item xs={12} sm = {2} py = {2}>
            <TextField
             required
-            id="email"
-            name="email"
-            label="Email"
+            id="cpf"
+            name="cpf"
+            label="Cpf"
             fullWidth
-            autoComplete="email"
+            autoComplete="cpf"
             variant="standard"
           />  
         </Grid> 
