@@ -119,15 +119,15 @@ export default function Album() {
                       Heading
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the content.
+                      Descricao Completa do vestuario...
                     </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
-                      View
+                      Solicitar Pedido
                     </Button>
                     <Button size="small" color="primary">
-                      Edit
+                      Pergunta
                     </Button>
                   </CardActions>
                 </Card>

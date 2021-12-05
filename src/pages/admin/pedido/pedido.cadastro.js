@@ -9,8 +9,16 @@ import Footer from '../../../components/footer_menu';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import { Button } from '@mui/material';
+import Autocomplete from '@mui/material/Autocomplete';
 
 const mdTheme = createTheme();
+
+const tamanhoVestuario = [
+  { label: 'P' },
+  { label: 'M' },
+  { label: 'G' },
+];
+
 const buttonStyle = {backgroundColor: '#de61a7'}
 const eventCLick = () =>{
 
@@ -50,36 +58,89 @@ export default function PedidoCadastro() {
                   <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="nome"
-            name="nome"
-            label="Nome Completo"
+            id="ref"
+            name="ref"
+            label="Referencia"
             fullWidth
-            autoComplete="nome"
+            autoComplete="ref"
             variant="standard"
           />
         </Grid>
-        <Grid intem xs={12} sm = {6}>
+                  <Grid item xs={12} sm={6} py = {2}>
+          <TextField
+            required
+            id="descricao"
+            name="descricao"
+            label="Descrição"
+            fullWidth
+            autoComplete="descricao"
+            variant="standard"
+          />
+        </Grid>
+        <Grid intem xs={12} sm = {6} py = {2}>
+           <Autocomplete
+  disablePortal
+  id="combo-box-demo"
+  options={tamanhoVestuario}
+  sx={{ width: 115 }}
+  renderInput={(params) => <TextField {...params} label="Tamanho" />}
+/>
+          </Grid>
+          <Grid intem xs={12} sm = {2} py = {2}>
            <TextField
             required
-            id="fone"
-            name="fone"
-            label="Contato"
+            id="quantidade"
+            name="quantidade"
+            label="Quantidade"
             fullWidth
-            autoComplete="fone "
+            autoComplete="quantidade"
             variant="standard"
           />  
-          </Grid> 
-          <Grid intem xs={12} sm = {6}>
-           <TextField
+          </Grid>
+          <Grid item xs={12} sm={2} py = {2}>
+          <TextField
             required
-            id="email"
-            name="email"
-            label="Email"
+            id="valor_entrada"
+            name="valor_entrada"
+            label="Valor Entrada"
             fullWidth
-            autoComplete="email"
+            autoComplete="valor_entrada"
             variant="standard"
-          />  
-        </Grid> 
+          />
+        </Grid>
+        <Grid item xs={12} sm={2} py = {2}>
+          <TextField
+            required
+            id="valor_total_pedido"
+            name="valor_total_pedido"
+            label="Valor Total"
+            fullWidth
+            autoComplete="valor_total_pedido"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item xs={12} sm={2} py = {2}>
+          <TextField
+            required
+            id="previsao_entrega"
+            name="previsao_entrega"
+            label="Previsao Entrega"
+            fullWidth
+            autoComplete="previsao_entrega"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item xs={12} sm={2} py = {2}>
+          <TextField
+            required
+            id="data_pedido"
+            name="data_pedido"
+            label="Data Pedido"
+            fullWidth
+            autoComplete="data_pedido"
+            variant="standard"
+          />
+        </Grid>
         <Grid intem xs = {12} sm = {6}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
          type = 'submit' color = 'primary' >Salvar</Button>
         </Grid>
