@@ -3,7 +3,7 @@
 import React from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Login from "./components/login";
-import Home from "./components/catalago";
+import Home from "./components/home";
 
 //IMPORTS ADMIN
 import Dashboard from "./pages/admin/dashboard";
@@ -27,6 +27,10 @@ import PedidoCadastro from "./pages/admin/pedido/pedido.cadastro";
 import Financeiro from "./pages/admin/financeiro";
 import FinanceiroEditar from "./pages/admin/financeiro/financeiro.editar";
 import FinanceiroCadastro from "./pages/admin/financeiro/financeiro.cadastro";
+
+import Catalago from "./pages/admin/catalago";
+import CatalagoEditar from "./pages/admin/catalago/catalado.editar";
+import CatalagoCadastro from "./pages/admin/catalago/catalago.cadastro";
 
 
 
@@ -57,9 +61,13 @@ export default function Routes() {
            <Router path = "/admin/financeiro/cadastro" exact component = {FinanceiroCadastro}/>
            <Router path = "/admin/financeiro/editar/:idFinanceiro" exact component = {FinanceiroEditar}/>
 
+           <Router path = "/admin/catalago" exact component = {Catalago}/>
+           <Router path = "/admin/catalago/cadastro" exact component = {CatalagoCadastro}/>
+           <Router path = "/admin/catalago/editar/:idCatalago" exact component = {CatalagoEditar}/>
+
 
            
-                <Route exact path="/catalago">
+                <Route exact path="/home">
                     <Home />
                 </Route>
                     <Route exact >

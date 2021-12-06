@@ -61,6 +61,17 @@ export default function FinanceiroCadastro() {
                   <Grid item xs={12} sm={2}>
           <TextField
             required
+            id="data"
+            name="data"
+            label="Data"
+            fullWidth
+            autoComplete="data"
+            variant="standard"
+          />
+        </Grid>
+                  <Grid item xs={12} sm={2} py = {2}>
+          <TextField
+            required
             id="produto_id"
             name="produto_id"
             label="Código Produto"
@@ -121,6 +132,17 @@ export default function FinanceiroCadastro() {
   sx={{ width: 210 }}
   renderInput={(params) => <TextField {...params} label="Metodo de Pagamento" />}
 />
+          </Grid>
+          <Grid intem sm = {2} py = {2}>
+           <TextField
+            required
+            id="total"
+            name="total"
+            label="Total"
+            fullWidth
+            autoComplete="total"
+            variant="standard"
+          />  
           </Grid>
         <Grid item xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
          type = 'submit' color = 'primary' >Salvar</Button>

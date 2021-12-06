@@ -9,7 +9,7 @@
  import Footer from '../../../components/footer_menu';
 
  const mdTheme = createTheme();
-
+ 
  export default function Dashboard() {
     return (
    <ThemeProvider theme={mdTheme}>
@@ -30,7 +30,7 @@
            <Toolbar />
            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
              <Grid container spacing={3}>
-                <img src = {ImgAdmin}/>      
+               <img src = {ImgAdmin}/> 
              </Grid>
              <Footer sx={{ pt: 4 }} />
            </Container>

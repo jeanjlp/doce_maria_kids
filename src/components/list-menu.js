@@ -9,6 +9,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import {BsCardChecklist, BsFacebook} from "react-icons/bs";
 import { RiInstagramFill} from "react-icons/ri";
 import ExitToApp from '@mui/icons-material/ExitToApp';
+import {GrCatalog } from "react-icons/gr";
 
 
 export const mainListItems = (
@@ -60,6 +61,12 @@ export const secondaryListItems = (
         <RiInstagramFill/>
       </ListItemIcon>
       <ListItemText primary="Instagram" />
+    </ListItem>
+    <ListItem button component = "a" href = "/admin/catalago/cadastro">
+      <ListItemIcon>
+        <GrCatalog/>
+      </ListItemIcon>
+      <ListItemText primary="Catálago" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
