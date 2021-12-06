@@ -80,6 +80,17 @@ export default function ClienteCadastro() {
             variant="standard"
           />  
         </Grid> 
+        <Grid item xs={12} sm = {2} py = {2}>
+           <TextField
+            required
+            id="data_nascimento"
+            name="data_nascimento"
+            label="Data Nascimento"
+            fullWidth
+            autoComplete="data_nascimento"
+            variant="standard"
+          />  
+        </Grid> 
         <Grid item xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
          type = 'submit' color = 'primary' >Salvar</Button>
         </Grid>
