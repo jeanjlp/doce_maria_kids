@@ -24,7 +24,7 @@ export const mainListItems = (
       <ListItemIcon>
         <GiClothes/>
       </ListItemIcon>
-      <ListItemText primary="Vestuário" />
+      <ListItemText primary="Vestuário"/>
     </ListItem>
     <ListItem button component = "a" href = "/admin/cliente/cadastro">
       <ListItemIcon>

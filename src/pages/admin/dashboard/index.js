@@ -30,7 +30,7 @@
            <Toolbar />
            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
              <Grid container spacing={3}>
-               <img src = {ImgAdmin}/> 
+               <img alt = "logomarca" src = {ImgAdmin}/> 
              </Grid>
              <Footer sx={{ pt: 4 }} />
            </Container>
