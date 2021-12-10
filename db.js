@@ -39,7 +39,7 @@ async function insertLogin(login){
 async function updateLogin(id, login){
     const client = await connect();
     const sql = 'update login set usuario = $1, senha = $2 where id = $3';
-    const values = [login.usuario, login.senha];
+    const values = [login.usuario, login.senha, id];
     return await client.query(sql, values);
 }
 
