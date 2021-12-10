@@ -18,4 +18,4 @@
     console.log('select * from login');
     const login = await db.selectLogin();
     console.log(login);
-})();
+    })();

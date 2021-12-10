@@ -20,7 +20,7 @@ async function connect(){
     return pool.connect();
 }
 
-// const db = require("./db");
+ const db = require("./db");
 async function selectLogin(){
     const client = await connect();
     const res = await client.query('select * from login');
