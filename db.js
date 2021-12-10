@@ -46,7 +46,7 @@ async function updateLogin(id, login){
 
 async function deleteLogin(id){
     const client = await connect();
-    const sql = 'delete from login where = id=$1;';
+    const sql = 'delete from login where id = $1;';
     return await client.query(sql,[id]);
 }
 

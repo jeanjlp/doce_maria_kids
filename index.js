@@ -11,7 +11,7 @@
     const result2 = await db.updateLogin(1, {usuario : "Sherolin Brunetto", senha: "sherolinbrunetto"});
     console.log(result2.rowCount);
 
-    console.log('delete form login');
+    console.log('delete from login');
     const result3 = await db.deleteLogin(1);
     console.log(result3.rowCount);
 
