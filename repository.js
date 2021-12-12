@@ -60,3 +60,64 @@ const Pool = require('pg').Pool;
         password: '0268',
         port: 5432,
      });
+
+     const getLogins = (request, response) => {
+         pool.query('select * from login oder by id desc', (error, results) =>{
+             if (error){
+                 throw error
+             }
+             response.status(200).json(results.rows)
+         })
+     }
+
+     const getLoginId = (request, response) => {
+         const id = parseInt(request.params.id)
+
+        pool.query('select * from login where id = $1', [id], (error, results) => {
+            if (error){
+                throw error
+            }
+            response.status(200).json(results.rows)
+        })
+    }
+
+    const createLogin = (request, response) => {
+        const {usuario, senha} = request.body
+        
+        pool.query('insert into login(usuario, senha) values($1, $2)', [nome, senha], (error, results) => {
+            if (error){
+                throw error
+            }
+            response.status(201).send('Login criado com suscesso.')
+        })
+    }
+
+    const updateLogin = (rquest, response) => {
+        const id = parseInt(request.params.id)
+        const {usuario, senha} = request.body
+
+        pool.query(
+            'update login set usuario = $1, senha = $2, where id = $3',
+            [usuario, senha, id],
+            (error, result) =>{
+                if(error){
+                    throw error
+                }
+                response.status(200).send(`Login ${id} atualizado como sucesso.`)
+            }
+        )
+    }
+
+    const deletLogin = (request, response) => {
+        const id =  parseInt(request.params.id)
+
+        pool.query('delete from login where id = $1',[id], (error, result) => {
+            if (error){
+                throw error
+            }
+            response.status(200).send(`Login removido com sucesso com o identificador: ${id}`)
+        })
+    }
+
+    module.exports = {getLogins, getLoginId, createLogin, updateLogin, deletLogin}
+

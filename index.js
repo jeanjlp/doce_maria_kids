@@ -24,6 +24,8 @@
 
     // 1
 
+    const repository = require('./repository')
+
     const express = require('express')
     const bodyParser = require ('body-parser')
     const app = express()
@@ -44,3 +46,9 @@
     app.get('/', (request, response)=>{
         response.json({ aplicacao: 'CRUD LOGIN'})
     })
+
+    app.get('/login', repository.getLogins)
+    app.get('/login/:id', repository.getLoginId)
+    app.post('/login', repository.createLogin)
+    app.put('/login/:id', repository.updateLogin)
+    app.delete('/login/:id', repository.deletLogin)
