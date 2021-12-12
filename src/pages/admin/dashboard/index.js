@@ -30,7 +30,7 @@
            <Toolbar />
            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
              <Grid container spacing={3}>
-               <img alt = "logomarca" src = {ImgAdmin}/> 
+               <img alt = "logo marca Doce Maria Kids" src = {ImgAdmin}/> 
              </Grid>
              <Footer sx={{ pt: 4 }} />
            </Container>
