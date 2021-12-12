@@ -108,6 +108,18 @@ export default function ProdutoCadastro() {
             variant="standard"
           />  
           </Grid>
+          <Grid intem xs = {12} sm = {12} py = {1}>
+           <TextField
+            required
+            id="imagem"
+            name="imagem"
+            label="Arquivo"
+            fullWidth
+            autoComplete="imagem"
+            variant="standard"
+            type= "file"
+          />  
+          </Grid>
         </Grid>  
         <Grid item xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
          type = 'submit' color = 'primary' >Salvar</Button>
