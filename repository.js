@@ -92,7 +92,7 @@ const Pool = require('pg').Pool;
         })
     }
 
-    const updateLogin = (rquest, response) => {
+    const updateLogin = (request, response) => {
         const id = parseInt(request.params.id)
         const {usuario, senha} = request.body
 

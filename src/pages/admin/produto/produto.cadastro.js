@@ -8,7 +8,7 @@ import Menu from '../../../components/menu';
 import Footer from '../../../components/footer_menu';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
-import { Button } from '@mui/material';
+import { Button} from '@mui/material';
 
 import Autocomplete from '@mui/material/Autocomplete';
 
@@ -109,16 +109,16 @@ export default function ProdutoCadastro() {
           />  
           </Grid>
           <Grid intem xs = {12} sm = {12} py = {1}>
-           <TextField
-            required
-            id="imagem"
-            name="imagem"
-            label="Arquivo"
-            fullWidth
-            autoComplete="imagem"
-            variant="standard"
-            type= "file"
-          />  
+           <Button
+                variant="contained"
+                component="label"
+              >
+                Upload File
+                <input
+                  type="file"
+                  hidden
+                />
+              </Button>  
           </Grid>
         </Grid>  
         <Grid item xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
