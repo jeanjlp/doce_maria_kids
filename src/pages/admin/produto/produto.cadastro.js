@@ -10,15 +10,39 @@ import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import { Button} from '@mui/material';
 
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+
+
 import Autocomplete from '@mui/material/Autocomplete';
+//import { RiNavigationFill } from 'react-icons/ri';
 
 const mdTheme = createTheme();
 const buttonStyle = {backgroundColor: '#de61a7'}
 
 const tamanhoVestuario = [
+  {label: 'RN'},
   { label: 'P' },
   { label: 'M' },
   { label: 'G' },
+  { label: 'GG'},
+  { label: '1'},
+  { label: '2'},
+  { label: '3'},
+  { label: '4'},
+  { label: '5'},
+  { label: '6'},
+  { label: '7'},
+  { label: '8'},
+  { label: '9'},
+  { label: '10'},
+  { label: '11'},
+  { label: '12'},
+  { label: '13'},
+  { label: '14'},
+  { label: '15'},
+  { label: '16'},
 ];
 
 const eventCLick = () =>{
@@ -57,7 +81,7 @@ export default function ProdutoCadastro() {
                 >
                   <h2>Formulário de Cadastro</h2>
                   <Grid item xs={12} sm={12}>
-          <TextField
+           <TextField
             required
             id="descricao"
             name="descricao"
@@ -65,18 +89,18 @@ export default function ProdutoCadastro() {
             fullWidth
             autoComplete="descricao"
             variant="standard"
-          />
-        </Grid>
-          <Grid intem xs={12} sm = {6} py = {2}>
+           />
+           </Grid>
+            <Grid intem xs={12} sm = {6} py = {2}>
            <Autocomplete
-  disablePortal
-  id="combo-box-demo"
-  options={tamanhoVestuario}
-  sx={{ width: 115 }}
-  renderInput={(params) => <TextField {...params} label="Tamanho" />}
-/>
-          </Grid>
-           <Grid intem xs={12} sm = {2} py = {2}>
+           disablePortal
+            id="combo-box-demo"
+            options={tamanhoVestuario}
+            sx={{ width: 115 }}
+            renderInput={(params) => <TextField {...params} label="Tamanho" />}
+            />
+            </Grid>
+           <Grid intem xs={12} sm = {6} py = {2}>
            <TextField
             required
             id="valor_compra"
@@ -85,8 +109,8 @@ export default function ProdutoCadastro() {
             fullWidth
             autoComplete="valor_compra"
             variant="standard"
-          />  
-          <Grid intem py = {2}>
+            />  
+            <Grid intem py = {2}>
            <TextField
             required
             id="valor_venda"
@@ -95,9 +119,9 @@ export default function ProdutoCadastro() {
             fullWidth
             autoComplete="valor_venda"
             variant="standard"
-          />  
-          </Grid>
-          <Grid intem py = {2}>
+           />  
+            </Grid>
+           <Grid intem py = {2}>
            <TextField
             required
             id="quantidade"
@@ -106,29 +130,33 @@ export default function ProdutoCadastro() {
             fullWidth
             autoComplete="quantidade"
             variant="standard"
-          />  
-          </Grid>
-          <Grid intem xs = {12} sm = {12} py = {1}>
+            />  
+            </Grid>
+            <Grid intem xs = {12} sm = {12} py = {1}>
            <Button
                 variant="contained"
                 component="label"
+                style={buttonStyle}
               >
                 Upload File
                 <input
                   type="file"
                   hidden
                 />
-              </Button>  
-          </Grid>
-        </Grid>  
-        <Grid item xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
-         type = 'submit' color = 'primary' >Salvar</Button>
-        </Grid>
+              </Button> 
+              <FormGroup>
+                  < FormControlLabel disable control={<Checkbox/>} label="Facebook" />
+              </FormGroup> 
+              </Grid>
+               </Grid>  
+              <Grid item xs = {12}><Button variant="contained" onClick = {eventCLick} style = {buttonStyle}
+                type = 'submit' color = 'primary' >Salvar</Button>
+                </Grid>
                 </Paper>
                 </Grid>  
-            </Grid>
-            <Footer sx={{ pt: 4 }}/>
-          </Container>
+              </Grid>
+              <Footer sx={{ pt: 4 }}/>
+            </Container>
         </Box>
       </Box>
     </ThemeProvider>

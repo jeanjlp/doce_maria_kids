@@ -5,7 +5,7 @@
  import Container from '@mui/material/Container';
  import Grid from '@mui/material/Grid';
  import Menu from '../../../components/menu';
- import ImgAdmin from '../../../assets/img/fundo.png'; //ajustar uma imagem com melhor resulucao que preecha o compo
+ import ImgAdmin from '../../../assets/img/fundo.png';
  import Footer from '../../../components/footer_menu';
 
  const mdTheme = createTheme();

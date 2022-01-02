@@ -24,31 +24,35 @@
 
     // 1
 
-    const repository = require('./repository')
 
-    const express = require('express')
-    const bodyParser = require ('body-parser')
-    const app = express()
-    const port = 3000
 
-    app.use(bodyParser.json());
+    // COMENTEI DAQUI PRA BAIXO HOJE 30/12/2021
 
-    app.use(
-        bodyParser.urlencoded({
-            extended: true,
-        })
-    )
+    // const repository = require('./repository')
 
-    app.listen(port, () => {
-        console.log(`Servidor rodando na porta de conexão ${port}.`)
-    })
+    // const express = require('express')
+    // const bodyParser = require ('body-parser')
+    // const app = express()
+    // const port = 3000
 
-    app.get('/', (request, response)=>{
-        response.json({ aplicacao: 'CRUD LOGIN'})
-    })
+    // app.use(bodyParser.json());
 
-    app.get('/login', repository.getLogins)
-    app.get('/login/:id', repository.getLoginId)
-    app.post('/login', repository.createLogin)
-    app.put('/login/:id', repository.updateLogin)
-    app.delete('/login/:id', repository.deletLogin)
+    // app.use(
+    //     bodyParser.urlencoded({
+    //         extended: true,
+    //     })
+    // )
+
+    // app.listen(port, () => {
+    //     console.log(`Servidor rodando na porta de conexão ${port}.`)
+    // })
+
+    // app.get('/', (request, response)=>{
+    //     response.json({ aplicacao: 'CRUD LOGIN'})
+    // })
+
+    // app.get('/login', repository.getLogins)
+    // app.get('/login/:id', repository.getLoginId)
+    // app.post('/login', repository.createLogin)
+    // app.put('/login/:id', repository.updateLogin)
+    // app.delete('/login/:id', repository.deletLogin)

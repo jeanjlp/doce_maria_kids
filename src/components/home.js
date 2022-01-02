@@ -111,8 +111,8 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                     image="https://source.unsplash.com/random"// ver se pega esse caminho da api facebook
-                    title="Coleção"
+                     image="https://source.unsplash.com/random"// ver se pega esse caminho da api facebook 
+                     title="Coleção"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
