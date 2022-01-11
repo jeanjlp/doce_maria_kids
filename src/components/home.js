@@ -90,14 +90,14 @@ export default function Album() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
+                  {/* <Button variant="contained" color="primary">
                     Main call to action
-                  </Button>
+                  </Button> */}
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
+                  {/* <Button variant="outlined" color="primary">
                     Secondary action
-                  </Button>
+                  </Button> */}
                 </Grid>
               </Grid>
             </div>
@@ -116,7 +116,7 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Coleçao Verão
                     </Typography>
                     <Typography>
                       Descricao Completa do vestuario...
@@ -124,7 +124,7 @@ export default function Album() {
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
-                      Solicitar Pedido
+                     <link href= "api.whatsapp.com/send?phone=5554999415572"/> Solicitar Pedido
                     </Button>
                     <Button size="small" color="primary">
                       Pergunta

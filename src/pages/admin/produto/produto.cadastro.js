@@ -64,13 +64,13 @@ export default function ProdutoCadastro() {
         }),
     };
     fetch('http://localhost:5000/produto', requestOptions)
-        .then(function (response) {
-            if (response.status === 200) {
-                history.push('/admin')//listagem de produtos
-            } else {
-                alert(response);//login não é aceit
-            }
-        });
+        // .then(function (response) {
+        //     if (response.status === 200) {
+        //         history.push('/admin')//listagem de produtos
+        //     } else {
+        //         alert(response);//login não é aceit
+        //     }
+        // });
 
 
 }
