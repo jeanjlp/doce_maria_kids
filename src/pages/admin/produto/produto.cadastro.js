@@ -1,4 +1,5 @@
-import * as React from 'react';
+//import * as React from 'react';
+import React, { useState} from "react";
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -51,6 +52,33 @@ const eventCLick = () =>{
 }
 
 export default function ProdutoCadastro() {
+  const [tamanho, setTamanho] = useState(null);
+
+  const eventCLick = () => {
+        
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            tamanho,
+        }),
+    };
+    fetch('http://localhost:5000/produto', requestOptions)
+        .then(function (response) {
+            if (response.status === 200) {
+                history.push('/admin')//listagem de produtos
+            } else {
+                alert(response);//login não é aceit
+            }
+        });
+
+
+}
+
+  const onTamanhoChange = (evt, novoValor) =>{
+    setTamanho(novoValor)
+  }
+
     return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex'}}>
@@ -96,6 +124,7 @@ export default function ProdutoCadastro() {
            disablePortal
             id="combo-box-demo"
             options={tamanhoVestuario}
+            onChange={onTamanhoChange}
             sx={{ width: 115 }}
             renderInput={(params) => <TextField {...params} label="Tamanho" />}
             />
