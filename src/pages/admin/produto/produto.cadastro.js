@@ -1,5 +1,6 @@
 //import * as React from 'react';
 import React, { useState} from "react";
+import { useHistory } from "react-router-dom";
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -52,31 +53,57 @@ const eventCLick = () =>{
 }
 
 export default function ProdutoCadastro() {
+  const [descricao, setDescricao] = useState(null);
   const [tamanho, setTamanho] = useState(null);
-
+  const [valor_compra, setValorCompra] = useState(null);
+  const [valor_venda, setValorVenda] = useState(null);
+  const [quantidade, setQuantidade] = useState(null);
+  const history = useHistory();
+  
+  
   const eventCLick = () => {
         
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            tamanho,
+          descricao,  
+          tamanho,
+          valor_compra,
+          valor_venda,
+          quantidade
         }),
     };
     fetch('http://localhost:5000/produto', requestOptions)
-        // .then(function (response) {
-        //     if (response.status === 200) {
-        //         history.push('/admin')//listagem de produtos
-        //     } else {
-        //         alert(response);//login não é aceit
-        //     }
-        // });
+         .then(function (response) {
+            if (response.status == 201) {
+                history.push('/admin/produto');
+             } else {
+                 alert("Erro ao cadastrar produto");
+            }
+         });
 
 
 }
 
   const onTamanhoChange = (evt, novoValor) =>{
-    setTamanho(novoValor)
+    setTamanho(novoValor.label)
+  }
+
+  const onChangeDescricao = (evt) =>{
+    setDescricao(evt.target.value)  
+  }
+
+  const onChangeValorCompra = (evt) =>{
+    setValorCompra(evt.target.value)  
+  }
+
+  const onChangeValorVenda = (evt) =>{
+    setValorVenda(evt.target.value)  
+  }
+
+  const onChangeQuantidade = (evt) =>{
+    setQuantidade(evt.target.value)  
   }
 
     return (
@@ -117,6 +144,8 @@ export default function ProdutoCadastro() {
             fullWidth
             autoComplete="descricao"
             variant="standard"
+            value={descricao}
+                   onChange={onChangeDescricao}
            />
            </Grid>
             <Grid intem xs={12} sm = {6} py = {2}>
@@ -138,6 +167,8 @@ export default function ProdutoCadastro() {
             fullWidth
             autoComplete="valor_compra"
             variant="standard"
+            value={valor_compra}
+                   onChange={onChangeValorCompra}
             />  
             <Grid intem py = {2}>
            <TextField
@@ -148,6 +179,8 @@ export default function ProdutoCadastro() {
             fullWidth
             autoComplete="valor_venda"
             variant="standard"
+            value={valor_venda}
+                   onChange={onChangeValorVenda}
            />  
             </Grid>
            <Grid intem py = {2}>
@@ -159,6 +192,8 @@ export default function ProdutoCadastro() {
             fullWidth
             autoComplete="quantidade"
             variant="standard"
+            value={quantidade}
+                   onChange={onChangeQuantidade}
             />  
             </Grid>
             <Grid intem xs = {12} sm = {12} py = {1}>

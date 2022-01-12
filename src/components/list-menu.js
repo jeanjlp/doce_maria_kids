@@ -56,11 +56,11 @@ export const secondaryListItems = (
       </ListItemIcon>
       <ListItemText primary="Facebook" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component = "a" href = "/home">
       <ListItemIcon>
         <RiInstagramFill/>
       </ListItemIcon>
-      <ListItemText primary="Instagram" />
+      <ListItemText primary="Vitrine" />
     </ListItem>
     <ListItem button component = "a" href = "/admin/catalago/cadastro">
       <ListItemIcon>

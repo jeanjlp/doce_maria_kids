@@ -1,4 +1,5 @@
-import * as React from 'react';
+import  React, {useEffect, useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -19,19 +20,41 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const mdTheme = createTheme();
 
-function createData(descricao, tamanho, valor_compra, valor_venda, quantidade) {
-  return { descricao, tamanho, valor_compra, valor_venda, quantidade };
-}
 
-const rows = [
-  createData('Vestido Rosa','P', 'R$ 35,00', 'R$ 75,00', 2 ),
-  createData('Short Jeans', 'M', 'R$ 40,00', 'R$ 85,00', 3 ),
-  createData('Blusinha Branca', 'G', 'R$ 45,00', 'R$ 95,00', 4),
-  createData('Conjunto Florido', 'P', 'R$ 50,00', 'R$ 105,00', 5),
-  createData('Vestido Lola ursinho', 'M', 'R$ 55,00', 'R$ 110,00', 6),
-];
 
 export default function ProdutoListagem() {
+   const [produtos, setProdutos] = useState([]);
+   const [produtoId, setProdutoId] = useState(null);
+   const history = useHistory();
+
+   useEffect(
+    () => {
+      fetch('http://localhost:5000/produto').
+      then(r => r.json()).
+      then (dados => setProdutos(dados))
+    },[produtoId]);
+ 
+
+    const removeProduto = (id) =>{
+      const requestOptions = {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }       
+    };
+    fetch(`http://localhost:5000/produto/${id}`, requestOptions)
+         .then(function (response) {
+            if (response.status == 200) {
+                setProdutoId(id);
+             } else {
+                 alert("Erro ao remover produto");
+            }
+         });
+
+
+    }
+
+    
+
+
    return (
   <ThemeProvider theme={mdTheme}>
     <Box sx={{ display: 'flex'}}>
@@ -76,9 +99,9 @@ export default function ProdutoListagem() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {produtos.map((row) => (
             <TableRow
-              key={row.name}
+              key={row.descricao}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
@@ -90,7 +113,7 @@ export default function ProdutoListagem() {
               <TableCell align="center">{row.quantidade}</TableCell>
               <ButtonGroup variant="contained" aria-label="outlined primary button group">
   <Button color ="success">Atualizar</Button>
-  <Button color = "error">Excluir</Button>
+  <Button color = "error" onClick={() => removeProduto(row.id)}>Excluir</Button>
 </ButtonGroup>
             </TableRow>
           ))}

@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import imgHome from '../assets/img/produto.png';
 
 function Copyright() {
   return (
@@ -49,7 +50,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    height: 0,
+    paddingTop: '100%', // 16:9
+    marginTop:'30'
   },
   cardContent: {
     flexGrow: 1,
@@ -63,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3, 4, 5, 6];
 
 export default function Album() {
   const classes = useStyles()
@@ -111,7 +114,8 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                     image="https://source.unsplash.com/random"// ver se pega esse caminho da api facebook 
+ 
+                      image={imgHome}
                      title="Coleção"
                   />
                   <CardContent className={classes.cardContent}>
@@ -119,15 +123,15 @@ export default function Album() {
                       Coleçao Verão
                     </Typography>
                     <Typography>
-                      Descricao Completa do vestuario...
+                      Vestido de usinho, Tamanho 12
                     </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
-                     <link href= "api.whatsapp.com/send?phone=5554999415572"/> Solicitar Pedido
+                     <a target="_blank" href="https://api.whatsapp.com/send?phone=5554999415572">Solicitar Pedido</a>
                     </Button>
                     <Button size="small" color="primary">
-                      Pergunta
+                    <a target="_blank" href="https://www.facebook.com/groups/573199143445445">Facebook</a>
                     </Button>
                   </CardActions>
                 </Card>
